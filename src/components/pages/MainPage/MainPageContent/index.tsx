@@ -21,6 +21,7 @@ const MainPageContent = ({ cardsData }: CardsPropsType) => (
     <div className={style.content}>
       <div className={style.nav}>
         <MainNav />
+        <h1>ddfdsdsfsdfsdfsdfsf</h1>
       </div>
       <div className={style.cards}>
         {cardsData.map((el) => (
