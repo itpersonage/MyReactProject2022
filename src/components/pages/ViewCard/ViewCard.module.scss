@@ -1,0 +1,279 @@
+@import '../../../assets/style/vars.scss';
+
+.content {
+    color: $text-color-grey;
+    padding-top: 32px;
+}
+
+.df_text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.df_sidebar {
+    display: flex;
+}
+
+.text {
+
+    & > p {
+        margin-top: 24px;
+    }
+
+    & > h1 {
+        color: black;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.count {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: #1d1d1d80;
+
+    & > p {
+        padding-top: 3px;
+        padding-left: 6px;
+    }
+}
+
+.price {
+    margin-top: 56px;
+    margin-right: 180px;
+
+    & > h1 {
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 32px;
+        color: black;
+    }
+
+    & > button {
+        display: block;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background-color: $active-color-blue;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 24px;
+        width: 135px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+    & > p {
+        font-size: 18px;
+        line-height: 24px;
+        color: black;
+    }  
+}
+
+.error {
+    text-align: center;
+    color: $active-color-blue;
+}
+
+.price_mobile {
+    display: none;
+}
+
+.sidebar {
+    margin-top: -43px;
+    margin-left: 102px;
+
+    & > p {
+        margin-bottom: 24px;
+    }
+}
+
+.sidebar img {
+    max-width: 303px;
+    height: 190px;
+    margin-bottom: 5px;
+}
+
+.sidebar div:nth-child(2) {
+    margin-bottom: 36px;
+}
+
+.sidebar_mobile {
+    display: none;
+}
+
+.description {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 32px;
+
+    & > h4 {
+        color: black;
+        margin-bottom: 24px;
+    }
+}
+
+.map {
+    margin-bottom: 40px;
+}
+
+.text_map {
+    display: flex;
+
+    & > h4 {
+        color: black;
+        margin-bottom: 24px;
+        margin-right: 10px;
+    }
+}
+
+.nav_list {
+    display: none;
+}
+
+@media only screen and (max-device-width: 1200px){
+
+    .content {
+        justify-content: center;
+        max-width: 766px;
+        margin:0 auto;
+    }
+
+    .price {
+        margin-right: 0;
+
+
+        & > button {
+            font-size: 12px;
+        }
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .nav_list {
+        display: block;
+        position: absolute;
+        color: #000;
+        top: 72px;
+        left: calc(100% - (1200px - 978px));
+        padding: 14px;
+        padding-right: 24px;
+        background-color: $background;
+        font-size: 24px;
+      }
+
+    .df_sidebar {
+        display: block;
+        margin-top: 0;
+    }
+
+    .sidebar_mobile {
+        display: block;
+        margin: 0;
+        margin-bottom: 100px;
+        padding-left: 0;
+        
+        & > p {
+            margin-bottom: 24px;
+        }
+    }
+
+    .df_sidebar_mobile {
+        display: flex;
+        justify-content: space-between;
+
+        & > img {
+            padding-right: 24px;
+            max-width: 33%;
+        }
+
+        & > img:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .map img {
+        max-width: 100%;
+    }
+
+    
+}
+
+@media only screen and (max-device-width: 768px){
+    .text {
+    
+        & > p {
+            display: none;
+        }
+    
+        & > h1 {
+            margin-bottom: 8px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .price {
+        display: none;
+    }
+
+    .nav_list {
+        left: 0;
+      }
+
+    .price_mobile {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        height: 65px;
+
+        & > p {
+            font-size: 18px;
+            line-height: 24px;
+            color: black;
+        }  
+    }
+
+    .button {
+        display: block;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background-color: $active-color-blue;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 24px;
+        width: 135px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .price_mobile h1 {
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 32px;
+        color: black;
+    }
+
+    .df_sidebar_mobile {
+        flex-direction: column;
+        align-items: center;
+
+        & > img {
+            padding-right: 10px;
+            padding-bottom: 72px;
+            max-width: 100%;
+        }
+
+        & > img:last-child {
+            padding-bottom: 0;
+        }
+    }
+} 
